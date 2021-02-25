@@ -410,7 +410,7 @@
 			flex: 0 1 50%;
 			margin: 0px 0px 38px 0px;
 			padding: 0px 14px;
-			@include mq($until: $xl) {
+			@include mq($until: xl) {
 				margin: 0px 0px 30 / $xl * 100vw 0px;
 			}
 			@include mq($until: md) {
@@ -458,7 +458,7 @@
 		margin: 0px 0px 20px 0px;
 		height: 203px;
 		max-height: 203px;
-		@include mq($until: $xl) {
+		@include mq($until: xl) {
 			margin: 0px 0px 20 / $xl * 100vw 0px;
 		}
 		&:after {
@@ -510,7 +510,7 @@
 		color: $color-black;
 		margin: 0px 0px 11px 0px;
 		transition: all 0.3s ease;
-		@include mq($until: $xl) {
+		@include mq($until: xl) {
 			font-size: 20px;
 		}
 		@include mq($until: md) {
@@ -525,7 +525,7 @@
 		color: $color-black;
 		font-size: 14px;
 		line-height: 150%;
-		@include mq($until: $xl) {
+		@include mq($until: xl) {
 			font-size: 13px;
 		}
 		@include mq($until: md) {
@@ -651,7 +651,7 @@
 	}
 }
 .page {
-	&__slider {
+	&__slider-bottom {
 		margin: 0px 0px 97px 0px;
 	}
 }
@@ -662,13 +662,13 @@
 
 	&__body {
 		display: flex;
+		align-items: center;
+		height: 136px;
 		ul {
 			align-items: center;
-			margin: 0px -15px;
 			li {
-				margin: 0px 15px;
 				&.swiper-slide-active {
-					// height: 136px;
+					height: 136px;
 					&__content {
 						display: flex;
 					}
@@ -678,12 +678,21 @@
 	}
 
 	&__slide {
+		transform: scale(0.8);
 	}
 
 	&__items {
 	}
 
 	&__item {
+		&.swiper-slide-active {
+			transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			transition-delay: 0.5s;
+			transform: scale(1);
+			&__content {
+				display: flex;
+			}
+		}
 	}
 
 	&__arrow {
@@ -694,6 +703,7 @@
 		width: 44px;
 		height: 44px;
 		background: #fff url("../../img/icons/bottom-slider-arrows.svg") center center no-repeat;
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 		&_prev {
 			left: 0;
 		}
@@ -706,7 +716,7 @@
 }
 .item-bottom-slider {
 	position: relative;
-	height: 107px;
+	min-height: 107px;
 	&__content {
 		display: none;
 		flex-direction: column;
