@@ -1,0 +1,43 @@
+{
+	"name": "fls_start_gulp",
+	"version": "1.0.0",
+	"description": "Start template with Gulp",
+	"author": "FLS",
+	"private": true,
+	"license": "GNU General Public License (GPL)",
+	"devDependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.1",
+		"browser-sync": "latest",
+		"del": "latest",
+		"gh-pages": "^3.1.0",
+		"gulp": "latest",
+		"gulp-autoprefixer": "latest",
+		"gulp-clean-css": "latest",
+		"gulp-file-include": "latest",
+		"gulp-fonter": "latest",
+		"gulp-group-css-media-queries": "latest",
+		"gulp-imagemin": "latest",
+		"gulp-media-queries-splitter": "latest",
+		"gulp-newer": "latest",
+		"gulp-plumber": "latest",
+		"gulp-rename": "latest",
+		"gulp-replace": "^1.0.0",
+		"gulp-responsive": "latest",
+		"gulp-sass": "^4.1.0",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-ttf2woff": "latest",
+		"gulp-ttf2woff2": "latest",
+		"gulp-uglify-es": "latest",
+		"gulp-webp-css": "latest",
+		"gulp-webp-html": "latest",
+		"imagemin-webp": "latest",
+		"transform-runtime": "0.0.0"
+	},
+	"dependencies": {
+		"file-exists": "^5.0.1",
+		"gulp-cheerio": "^1.0.0",
+		"gulp-if": "^3.0.0",
+		"gulp-svgmin": "^3.0.0",
+		"svgxuse": "^1.2.6"
+	}
+}

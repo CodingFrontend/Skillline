@@ -1,0 +1,19 @@
+// Rem output with px fallback
+@function stripUnit($value) {
+	@return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+	@return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+// Spacing %
+@function space($space) {
+	@return $space / $max-width-container * 100%;
+}
+
+
+// px to vh
+@function get-vh($object) {
+	$vh: (768 * 0.01) * 1px;
+	@return ($object / $vh) * 1vh;
+}
