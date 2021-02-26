@@ -248,7 +248,6 @@ if (isMobile.any()) {
 					body_lock(delay);
 					iconMenu.classList.toggle("active");
 					menuBody.classList.toggle("active");
-					iconMenuClose.classList.toggle("active");
 				}
 			});
 		}
