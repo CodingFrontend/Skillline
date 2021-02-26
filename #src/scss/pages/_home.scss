@@ -1,9 +1,15 @@
+// Page
 .page {
 	&__slider {
 	}
 	&__maincontent {
 	}
+	&__slider-bottom {
+		margin: 0px 0px 97px 0px;
+	}
 }
+
+// Mainslider
 .mainslider {
 	position: relative;
 	margin-bottom: 99px;
@@ -110,7 +116,6 @@
 		}
 	}
 }
-
 .content-mainslider {
 	padding: 66px 108px 48px 108px;
 	@include mq($until: xl) {
@@ -221,7 +226,6 @@
 		}
 	}
 }
-
 .maincontent-page {
 	margin: 0px 0px 80px 0px;
 	&__container {
@@ -242,6 +246,8 @@
 		}
 	}
 }
+
+// Main content
 .content-page {
 	&__news {
 	}
@@ -251,10 +257,18 @@
 		}
 	}
 }
+.content-main {
+	&__news {
+	}
+	&__reviews {
+	}
+}
+
+// News
 .news {
 	margin: 0px 0px 75px 0px;
-	@include mq($until: lg) {
-		margin: 0px 0px 75 / $lg * 100vw 0px;
+	@include mq($until: xl) {
+		margin: 0px 0px 60 / $xl * 100vw 0px;
 	}
 	&__title {
 		font-family: $font-Raleway;
@@ -263,40 +277,6 @@
 		line-height: 20 / 17 * 100%;
 		letter-spacing: 2px;
 		margin: 0px 0px 15px 0px;
-	}
-
-	&__content {
-		display: flex;
-		@include mq($until: md) {
-			display: block;
-		}
-	}
-
-	&__column {
-		&:first-child {
-			flex: 1 1 auto;
-		}
-		&:last-child {
-			flex: 0 1 271px;
-			margin: 0px 0px 0px 29px;
-		}
-	}
-
-	&__item {
-	}
-}
-.content-main {
-	&__news {
-	}
-	&__reviews {
-	}
-}
-.news {
-	margin: 0px 0px 75px 0px;
-	@include mq($until: xl) {
-		margin: 0px 0px 60 / $xl * 100vw 0px;
-	}
-	&__title {
 	}
 
 	&__items {
@@ -316,7 +296,22 @@
 			margin: 0px 0px 50px 0px;
 		}
 	}
+	&__content {
+		display: flex;
+		@include mq($until: md) {
+			display: block;
+		}
+	}
 
+	&__column {
+		&:first-child {
+			flex: 1 1 auto;
+		}
+		&:last-child {
+			flex: 0 1 271px;
+			margin: 0px 0px 0px 29px;
+		}
+	}
 	&__item {
 	}
 }
@@ -447,6 +442,8 @@
 		}
 	}
 }
+
+// Reviews
 .reviews {
 	margin: 0px 0px 87px 0px;
 	&__title {
@@ -638,27 +635,8 @@
 		background: url("../../img/icons/comments.svg") center left no-repeat;
 	}
 }
-.content-side {
-	&__banners {
-		display: flex;
-		flex-direction: column;
-		min-height: 100%;
-	}
-	&__banner-holder {
-		margin: 0px 0px 33 / 370 * 100% 0px;
-		display: flex;
-		flex-grow: 1;
-		&:last-child {
-			margin: 0px 0px 0px 0px;
-		}
-		@include mq($until: lg) {
-			min-height: 310px;
-		}
-		@include mq($until: md) {
-			margin: 0px 0px 30px 0px;
-		}
-	}
-}
+
+// Banners
 .banner-content {
 	position: relative;
 	&_side {
@@ -726,11 +704,8 @@
 		}
 	}
 }
-.page {
-	&__slider-bottom {
-		margin: 0px 0px 97px 0px;
-	}
-}
+
+// Bottom slider
 .bottom-slider {
 	&__container {
 		position: relative;
@@ -816,8 +791,11 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
 		height: 100%;
-		position: relative;
 		z-index: 2;
 	}
 

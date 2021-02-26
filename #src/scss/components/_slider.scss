@@ -1,7 +1,7 @@
 ._swiper {
 	overflow-x: hidden;
 	//.swiper-wrapper
-	> div {
+	> ul {
 		width: 100%;
 		height: 100%;
 		box-sizing: content-box;
@@ -9,7 +9,7 @@
 		position: relative;
 	}
 	&.swiper-container-autoheight {
-		> div {
+		> ul {
 			align-items: flex-start;
 		}
 	}

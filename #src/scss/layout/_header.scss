@@ -1,5 +1,6 @@
+// Header
 .header {
-	background-color: #fff;
+	background-color: $color-white;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -13,7 +14,7 @@
 		justify-content: center;
 		position: relative;
 		@include mq($until: xl) {
-			height: 185;
+			height: 185px;
 		}
 		@include mq($until: lg) {
 			height: 156px;
@@ -43,115 +44,19 @@
 	&__menu {
 	}
 }
-.menu {
-	&__icon {
-	}
-	&__body {
-		@include mq($until: lg) {
-			opacity: 0;
-			visibility: hidden;
-			position: fixed;
-			height: 100%;
-			width: 100%;
-			top: 0;
-			left: 0;
-			z-index: 2;
-			overflow: auto;
-			background-color: $color-white;
-			padding: 120px 0px 30px 0px;
-			transition: all 0.3s ease;
-			&:before {
-				content: "";
-				content: "";
-				position: fixed;
-				width: 100%;
-				height: 76px;
-				top: 0;
-				left: 0;
-				z-index: 100;
-				background-color: $color-white;
-			}
-			&.active {
-				opacity: 1;
-				visibility: visible;
-				display: block;
-			}
-		}
-		@include mq($until: lg) {
-			padding: 90px 0px 30px 0px;
-			&:before {
-				content: "";
-				height: 70px;
-			}
-		}
-	}
 
-	&__list {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		@include mq($until: lg) {
-			display: block;
-		}
-		li {
-			margin: 0px 49px 0px 0px;
-			&:last-child {
-				margin: 0px 0px 0px 0px;
-			}
-			@include mq($until: xl) {
-				margin: 0px 36 / $max-width-container * 100vw 0px 0px;
-			}
-			@include mq($until: lg) {
-				margin: 0px 0px 20px 0px;
-				width: 100%;
-			}
-		}
-	}
-
-	&__link {
-		font-family: $font-Raleway;
-		font-size: 15px;
-		line-height: 18 / 15 * 100%;
-		letter-spacing: 2px;
-		color: $color-black;
-		@include mq($until: xl) {
-			font-size: 14px;
-		}
-		@include mq($until: lg) {
-			display: block;
-			font-size: 13px;
-			padding: 18px 22px 18px 16px;
-			background-color: $color-light-grey;
-			font-size: 16px;
-			line-height: 19 / 16 * 100%;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			color: #48494d;
-			position: relative;
-			&:after {
-				content: "";
-				position: absolute;
-				top: 50%;
-				right: 22px;
-				transform: translate(0, -50%);
-				width: 7.4px;
-				height: 12px;
-				background: url("../../img/icons/arrow-right.svg") 0 0 no-repeat;
-			}
-		}
-	}
-}
+// Burger menu
 .icon-menu {
 	display: none;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	background-color: $color-orange;
 	@include mq($until: lg) {
 		display: block;
-		position: absolute;
-		z-index: 5;
-		top: 0;
-		left: 0px;
-		width: 50px;
-		height: 50px;
-		background-color: $color-orange;
 	}
 	&__wrapper {
 		position: absolute;
@@ -181,8 +86,7 @@
 	&.active {
 		display: block;
 		cursor: pointer;
-		top: 17px !important;
-		right: 17px !important;
+		top: 17px;
 		width: 28px;
 		height: 28px;
 		background-color: transparent;

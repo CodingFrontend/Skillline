@@ -12,7 +12,7 @@ if (sliders) {
 				}
 			}
 			let slider_content = slider.innerHTML;
-			let slider_wrapper = document.createElement('div');
+			let slider_wrapper = document.createElement('ul');
 			slider_wrapper.classList.add('swiper-wrapper');
 			slider_wrapper.innerHTML = slider_content;
 			slider.innerHTML = '';
@@ -28,6 +28,7 @@ if (sliders) {
 
 function sliders_bild_callback(params) { }
 
+// Mainslider
 if (document.querySelector('.mainslider__body')) {
 	let mainsliderBody = new Swiper('.mainslider__body', {
 		/*
@@ -98,6 +99,7 @@ if (document.querySelector('.mainslider__body')) {
 	}
 };
 
+// Bottom-Slider
 if (document.querySelector('.bottom-slider')) {
 	let bottomSlider = new Swiper('.bottom-slider__body ', {
 		/*

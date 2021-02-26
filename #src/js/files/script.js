@@ -1,7 +1,3 @@
-// let all browsers support referring icons to external svg-file
-svg4everybody({});
-// 
-
 // burger
 if (isMobile.any()) {
 	(function () {
