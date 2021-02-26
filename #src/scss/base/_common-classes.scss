@@ -33,6 +33,17 @@
 	&__container {
 	}
 }
+._anim-show {
+	transform: translate(0%, 120%);
+	opacity: 0;
+	transition: all 0.8s ease;
+}
+._anim-show._active,
+._active ._anim-show {
+	transform: translate(0%, 0%);
+	opacity: 1;
+}
+
 .ibg {
 	background-size: cover;
 	background-repeat: no-repeat;
