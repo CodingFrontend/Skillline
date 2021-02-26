@@ -1180,7 +1180,7 @@ body:before {
   display: inline-block;
   width: 44px;
   height: 44px;
-  background: #fff url("../../img/icons/bottom-slider-arrows.svg") center center no-repeat;
+  background: #fff url("../img/icons/bottom-slider-arrows.svg") center center no-repeat;
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
 }
@@ -1763,7 +1763,7 @@ body:before {
 .item-reviews__top:after{background:url("../img/icons/bage.svg") 0 0 no-repeat}
 .stat-item__views{background:url("../img/icons/views.svg") center left no-repeat}
 .stat-item__comments{background:url("../img/icons/comments.svg") center left no-repeat}
-.bottom-slider__arrow{background:#fff url("../../img/icons/bottom-slider-arrows.svg") center center no-repeat}
+.bottom-slider__arrow{background:#fff url("../img/icons/bottom-slider-arrows.svg") center center no-repeat}
 }
 
  @media screen and (min-width: 20.06125em){
