@@ -45,19 +45,19 @@ if (document.querySelector('.mainslider__body')) {
 		speed: 800,
 		//touchRatio: 0,
 		//simulateTouch: false,
-		// loop: true,
+		loop: true,
 		//preloadImages: false,
 		//lazy: true,
 		// Dotts
 		pagination: {
-			el: '.mainslider__dots',
+			el: '.mainslider__pagination',
 			clickable: true,
 		},
 		// Arrows
-		// navigation: {
-		// 	nextEl: '.about__more .more__item_next',
-		// 	prevEl: '.about__more .more__item_prev',
-		// },
+		navigation: {
+			nextEl: '.mainslider__arrow_next',
+			prevEl: '.mainslider__arrow_prev',
+		},
 		/*
 		breakpoints: {
 			320: {
@@ -99,7 +99,7 @@ if (document.querySelector('.mainslider__body')) {
 };
 
 if (document.querySelector('.bottom-slider')) {
-	let mainsliderBody = new Swiper('.bottom-slider__body ', {
+	let bottomSlider = new Swiper('.bottom-slider__body ', {
 		/*
 		effect: 'fade',
 		autoplay: {
@@ -109,7 +109,7 @@ if (document.querySelector('.bottom-slider')) {
 		*/
 		observer: true,
 		observeParents: true,
-		slidesPerView: 4,
+		// slidesPerView: 4,
 		spaceBetween: 15,
 		autoHeight: true,
 		speed: 800,
@@ -120,7 +120,7 @@ if (document.querySelector('.bottom-slider')) {
 		//lazy: true,
 		// Dotts
 		pagination: {
-			el: '.mainslider__dots',
+			el: '.bottom-slider__pagination',
 			clickable: true,
 		},
 		// Arrows
@@ -128,7 +128,7 @@ if (document.querySelector('.bottom-slider')) {
 			nextEl: '.bottom-slider__arrow_next',
 			prevEl: '.bottom-slider__arrow_prev',
 		},
-		/*
+
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -137,33 +137,17 @@ if (document.querySelector('.bottom-slider')) {
 			},
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+				spaceBetween: 25,
 			},
 			992: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			1268: {
+			1201: {
 				slidesPerView: 4,
-				spaceBetween: 30,
+				spaceBetween: 15,
 			},
 		},
-		*/
-		on: {
-			lazyImageReady: function () {
-				ibg();
-			},
-		}
-		// And if we need scrollbar
-		//scrollbar: {
-		//	el: '.swiper-scrollbar',
-		//},
-	});
-	let mainsliderImages = document.querySelectorAll('.mainslider__image');
-	let mainsliderDotts = document.querySelectorAll('.mainslider__dots .swiper-pagination-bullet');
 
-	for (let i = 0; i < mainsliderImages.length; i++) {
-		const mainsliderImage = mainsliderImages[i].querySelector('img').getAttribute('src');
-		mainsliderDotts[i].style.backgroundImage = "url('" + mainsliderImage + "')";
-	}
+	});
 };
